@@ -900,11 +900,15 @@ body.light-theme {
 
 .footer__copy {
   display: block;
-  margin-top: 4.5rem;
+  margin-top: 3rem;
   color: var(--container-color);
   text-align: center;
   font-size: var(--smaller-font-size);
   margin-bottom: 2rem;
+}
+.end {
+  color: darkblue;
+  font-weight: 900;
 }
 
 /*=============== SCROLL BAR ===============*/
@@ -913,6 +917,7 @@ body.light-theme {
   border-radius: 0.5rem;
   background-color: var(--container-color);
 }
+
 
 ::-webkit-scrollbar-track {
   border-radius: 1.5rem;
