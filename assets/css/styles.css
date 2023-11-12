@@ -13,9 +13,9 @@
         Pink: hsl(356, 66%, 75%)
         Teal: hsl(174, 63%, 62%)
   */
-  --first-hue: 250;
-  --sat: 66%;
-  --lig: 75%;
+  --first-hue: 207;
+  --sat: 90%;
+  --lig: 72%;
   --second-hue: 219;
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
   --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
@@ -27,15 +27,15 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: "Poppins", sans-serif;
   --biggest-font-size: 1.75rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
-  --tiny-font-size: .625rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  --tiny-font-size: 0.625rem;
 
   /*========== Font weight ==========*/
   --font-medium: 500;
@@ -55,8 +55,8 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
   }
 }
 
@@ -82,10 +82,12 @@ textarea {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: .6s; /* for light mode animation */
+  transition: 0.6s; /* for light mode animation */
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--title-color);
   font-weight: var(--font-semibold);
 }
@@ -203,7 +205,7 @@ body.light-theme {
   padding: 4.5rem 0 1rem;
 }
 
-.section__title, 
+.section__title,
 .section__subtitle {
   text-align: center;
 }
@@ -410,7 +412,6 @@ body.light-theme {
   transform: rotate(-90deg);
 }
 
-
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
@@ -479,7 +480,6 @@ body.light-theme {
   margin-bottom: 2rem;
 }
 
-
 /*=============== SKILLS ===============*/
 .skills__container {
   row-gap: 2rem;
@@ -532,9 +532,7 @@ body.light-theme {
   font-size: var(--small-font-size);
 }
 
-
 /*=============== SERVICES ===============*/
-
 
 .services__container {
   grid-template-columns: repeat(2, 1fr);
@@ -682,7 +680,6 @@ body.light-theme {
 
 /*=============== Project ===============*/
 
-
 .work__container {
   padding-top: 1rem;
 }
@@ -714,6 +711,7 @@ body.light-theme {
   margin-bottom: 0.75rem;
 }
 
+
 .work__title {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
@@ -739,18 +737,19 @@ body.light-theme {
   transition: 0.4s;
 }
 
+.project-type{
+  font-size: .7rem;
+}
+
 /* Active item work*/
 .active-work {
   background-color: var(--first-color);
   color: var(--body-color);
 }
 
-
 /*=============== TESTIMONIAL ===============*/
 
-
 /* Swiper class */
-
 
 /*=============== CONTACT ===============*/
 
@@ -928,15 +927,12 @@ body.light-theme {
   background-color: var(--first-color-alt);
 }
 
-
-
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {
   .nav__menu {
     padding: 1rem 1.5rem;
   }
-
   .home__button {
     flex-direction: column;
   }
@@ -1075,9 +1071,7 @@ body.light-theme {
   .contact__form {
     width: 340px;
   }
-
 }
-
 
 /* For large devices */
 @media screen and (min-width: 992px) {
@@ -1099,18 +1093,25 @@ body.light-theme {
   }
 
   .home__handle {
-    width: 290px;
-    height: 400px;
+    /* width: 290px; */
+    width: 350px;
+    /* height: 400px; */
+    height: 420px;
+    border-radius: 10%;
   }
 
   .home__img {
-    width: 220px;
+    /* width: 220px; */
+    width: 100%;
   }
   .home__social-link {
     padding: 0.4rem;
     font-size: 1.25rem;
   }
 
+  .home__scroll, .home__social {
+    margin-bottom: 85px;
+  }
   .home__social::after {
     transform: rotate(90deg) translate(16px, -1px);
   }
@@ -1213,5 +1214,12 @@ body.light-theme {
     font-size: 1.25rem;
     padding: 0.4rem;
     border-radius: 0.5rem;
+  }
+  .algo{
+    height: 190px;
+  }
+
+  .algo-demo{
+    margin-top: 25px;
   }
 }
